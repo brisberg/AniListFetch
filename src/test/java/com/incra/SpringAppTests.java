@@ -1,5 +1,6 @@
 package com.incra;
 
+import com.incra.services.HelloService;
 import junit.framework.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

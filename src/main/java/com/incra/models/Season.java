@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Surveys have a title, and a start and end date. They have a one-to-many with series that aired during this season.
+ * Surveys have a title, and a start and end date. They have a one-to-many with Series that aired during this season.
  *
  * @author Brandon Risberg
  * @since 2/16/2016
@@ -19,13 +19,13 @@ public class Season {
 
     private Date endDate;
 
-    private List<SeriesTest> seriesList;
+    private List<Series> seriesList;
 
     /**
      * Constructor
      */
     public Season() {
-        seriesList = new ArrayList<SeriesTest>();
+        seriesList = new ArrayList<Series>();
     }
 
     public String getTitle() {
@@ -52,11 +52,11 @@ public class Season {
         this.endDate = endDate;
     }
 
-    public List<SeriesTest> getSeriesList() {
+    public List<Series> getSeriesList() {
         return seriesList;
     }
 
-    public void setSeriesList(List<SeriesTest> seriesList) {
+    public void setSeriesList(List<Series> seriesList) {
         this.seriesList = seriesList;
     }
 

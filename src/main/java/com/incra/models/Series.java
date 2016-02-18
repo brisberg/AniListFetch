@@ -4,12 +4,12 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * SeriesTest have a title, start and end dates and the season in which they aired.
+ * Series have a title, start and end dates and the season in which they aired.
  *
  * @author Brandon Risberg
  * @since 2/16/2016
  */
-public class SeriesTest {
+public class Series {
 
     private String title;
 
@@ -23,7 +23,7 @@ public class SeriesTest {
 
     private List<Episode> episodeList;
 
-    public SeriesTest() {
+    public Series() {
     }
 
     public String getTitle() {
@@ -77,9 +77,9 @@ public class SeriesTest {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof SeriesTest)) return false;
+        if (!(o instanceof Series)) return false;
 
-        SeriesTest series = (SeriesTest) o;
+        Series series = (Series) o;
 
         return title.equals(series.title);
 
@@ -94,7 +94,7 @@ public class SeriesTest {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("SeriesTest[title=");
+        sb.append("Series[title=");
         sb.append(title);
         sb.append("]");
 

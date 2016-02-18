@@ -3,7 +3,7 @@ package com.incra.models;
 import java.util.Date;
 
 /**
- * SeriesTest have a title, start and end dates and the season in which they aired.
+ * Series have a title, start and end dates and the season in which they aired.
  *
  * @author Brandon Risberg
  * @since 2/16/2016
@@ -20,7 +20,7 @@ public class Episode {
 
     private int weekIndex;
 
-    private SeriesTest series;
+    private Series series;
 
     public Episode() {
     }
@@ -65,11 +65,11 @@ public class Episode {
         this.weekIndex = weekIndex;
     }
 
-    public SeriesTest getSeries() {
+    public Series getSeries() {
         return series;
     }
 
-    public void setSeries(SeriesTest series) {
+    public void setSeries(Series series) {
         this.series = series;
     }
 
@@ -93,7 +93,7 @@ public class Episode {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("SeriesTest[title=");
+        sb.append("Series[title=");
         sb.append(title);
         sb.append("]");
 

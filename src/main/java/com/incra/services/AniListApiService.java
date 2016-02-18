@@ -1,6 +1,6 @@
 package com.incra.services;
 
-import com.incra.models.SeriesTest;
+import com.incra.models.Series;
 import com.incra.pojos.AniListAccessToken;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
@@ -68,8 +68,8 @@ public class AniListApiService {
         return null;
     }
 
-    public SeriesTest fetchSeries() {
-        SeriesTest series = new SeriesTest();
+    public Series fetchSeries() {
+        Series series = new Series();
         return series;
     }
 }

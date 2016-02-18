@@ -19,13 +19,13 @@ public class Season {
 
     private Date endDate;
 
-    private List<Series> seriesList;
+    private List<SeriesTest> seriesList;
 
     /**
      * Constructor
      */
     public Season() {
-        seriesList = new ArrayList<Series>();
+        seriesList = new ArrayList<SeriesTest>();
     }
 
     public String getTitle() {
@@ -52,11 +52,11 @@ public class Season {
         this.endDate = endDate;
     }
 
-    public List<Series> getSeriesList() {
+    public List<SeriesTest> getSeriesList() {
         return seriesList;
     }
 
-    public void setSeriesList(List<Series> seriesList) {
+    public void setSeriesList(List<SeriesTest> seriesList) {
         this.seriesList = seriesList;
     }
 

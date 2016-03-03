@@ -15,6 +15,10 @@ public class Season {
 
     private String title;
 
+    private String seasonName; // summer, fall, winter, spring
+
+    private int year; // eg. 2015
+
     private Date startDate;
 
     private Date endDate;
@@ -34,6 +38,22 @@ public class Season {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getSeasonName() {
+        return seasonName;
+    }
+
+    public void setSeasonName(String seasonName) {
+        this.seasonName = seasonName;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 
     public Date getStartDate() {

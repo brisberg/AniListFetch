@@ -1,5 +1,9 @@
 package com.incra.models;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.annotate.JsonProperty;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -9,14 +13,24 @@ import java.util.List;
  * @author Brandon Risberg
  * @since 2/16/2016
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Series {
 
+    private int seriesId;
+
+    @JsonProperty("id")
+    private int aniListId;
+
+    @JsonProperty("title_english")
     private String title;
 
+    @JsonProperty("total_episodes")
     private int episodeCount;
 
+    @JsonProperty("start_date")
     private Date startDate;
 
+    @JsonProperty("end_date")
     private Date endDate;
 
     private Season season;
@@ -24,6 +38,23 @@ public class Series {
     private List<Episode> episodeList;
 
     public Series() {
+        episodeList = new ArrayList<Episode>();
+    }
+
+    public int getSeriesId() {
+        return seriesId;
+    }
+
+    public void setSeriesId(int seriesId) {
+        this.seriesId = seriesId;
+    }
+
+    public int getAniListId() {
+        return aniListId;
+    }
+
+    public void setAniListId(int aniListId) {
+        this.aniListId = aniListId;
     }
 
     public String getTitle() {

@@ -1,5 +1,8 @@
 package com.incra.models;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.annotate.JsonProperty;
+
 import java.util.Date;
 
 /**
@@ -8,12 +11,15 @@ import java.util.Date;
  * @author Brandon Risberg
  * @since 2/16/2016
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Episode {
 
     private String title;
 
+    @JsonProperty("next_episode")
     private int episodeIndex;
 
+    @JsonProperty("time")
     private Date airDate;
 
     private Season season;
@@ -93,8 +99,8 @@ public class Episode {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Series[title=");
-        sb.append(title);
+        sb.append("Episode[index=");
+        sb.append(episodeIndex);
         sb.append("]");
 
         return sb.toString();

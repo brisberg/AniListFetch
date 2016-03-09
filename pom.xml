@@ -10,6 +10,7 @@
 
     <properties>
         <spring.version>3.2.13.RELEASE</spring.version>
+        <jackson.version>2.4.4</jackson.version>
     </properties>
 
     <dependencies>
@@ -43,9 +44,9 @@
             <version>1.7.2</version>
         </dependency>
         <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
     </dependencies>
 

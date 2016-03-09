@@ -1,13 +1,13 @@
 package com.incra.pojos;
 
-import org.codehaus.jackson.annotate.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
 /**
  * Created by Brandon Risberg on 2/16/2016.
  * <p/>
- * Pojo represting a timed access token acquired from AniList.co
+ * Pojo representing a timed access token acquired from AniList.co
  */
 public class AniListAccessToken {
     @JsonProperty("access_token")

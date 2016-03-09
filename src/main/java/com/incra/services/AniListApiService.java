@@ -1,13 +1,14 @@
 package com.incra.services;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
 import com.incra.models.Episode;
 import com.incra.models.Season;
 import com.incra.models.Series;
 import com.incra.pojos.AniListAccessToken;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.ObjectReader;
-import org.codehaus.jackson.type.TypeReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -210,7 +211,7 @@ public class AniListApiService {
 
             // append the next episode
             final JsonNode episodeResponce = mapper.readTree(responseBuffer.toString()).path("airing");
-            Episode nextEpisode = mapper.readValue(episodeResponce, Episode.class);
+            Episode nextEpisode = mapper.treeToValue(episodeResponce, Episode.class);
             nextEpisode.setSeries(series);
             nextEpisode.setSeason(series.getSeason());
             nextEpisode.setWeekIndex(weekIndex);

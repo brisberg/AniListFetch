@@ -16,14 +16,13 @@ import org.springframework.stereotype.Component;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class AniListApiService {
     private static final Logger logger = LoggerFactory.getLogger(AniListApiService.class);
 
-    public AniListAccessToken accuireAccessToken() {
+    public AniListAccessToken acquireAccessToken() {
         String url = "https://anilist.co/api/auth/access_token";
 
         URL obj;

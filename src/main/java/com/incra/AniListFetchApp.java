@@ -15,7 +15,7 @@ public class AniListFetchApp {
         AniListApiService aniListApiService = context.getBean(AniListApiService.class);
 
         // Acquire an accessToken from AniList.co
-        AniListAccessToken accessToken = aniListApiService.accuireAccessToken();
+        AniListAccessToken accessToken = aniListApiService.acquireAccessToken();
 
         Season testSeason = new Season();
         testSeason.setTitle("Winter 2016");
